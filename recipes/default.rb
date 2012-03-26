@@ -57,7 +57,7 @@ when 'ubuntu', 'debian'
     action :upgrade
   end
 
-when "redhat", "centos", "fedora"
+when "redhat", "centos", "amazon", "scientific", "fedora"
 
   snort_package = case node['snort']['database']
                   when "none"

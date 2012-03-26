@@ -20,7 +20,7 @@
 case node['platform']
 when "ubuntu", "debian"
   default['snort']['home_net'] = "192.168.0.0/16"
-when "redhat","centos","fedora"
+when "redhat","centos","amazon","scientific","fedora"
   default['snort']['home_net'] = "any"
   default['snort']['rpm']['version']                   = "2.9.0.3-1.F13"
   default['snort']['rpm']['checksum_snort']            = "7625fba04aa7ff2053f91406fa9ad457868ba711097000ca051ba2e0a245a904"
