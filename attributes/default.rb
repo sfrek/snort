@@ -19,7 +19,11 @@
 
 case node['platform']
 when "ubuntu", "debian"
+    # TODO:
+    # chage home_net to default_interface -> routes -> destination
   default['snort']['home_net'] = "192.168.0.0/16"
+  default[:snort][:statup] = "manual"
+  default[:snort][:snort_default_interface] = node[:network][:deafult_interface]
 when "redhat","centos",
   default['snort']['home_net']            = "any"
   default['snort']['rpm']['daq_version']  = "2.0.0-1.centos6"
